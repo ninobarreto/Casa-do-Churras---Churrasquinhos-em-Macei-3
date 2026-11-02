@@ -1,6 +1,8 @@
 {
-  "name": "Casa do Churras - Churrasquinhos em Maceió",
+  "name": "Casa do Churras - Churrasquinhos em Maceió 3",
   "description": "Landing page institucional da Casa do Churras em Maceió – AL. Espetinhos saborosos na brasa, atendimento pelo WhatsApp e tradição de churrasco.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
