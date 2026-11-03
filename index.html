@@ -1469,15 +1469,11 @@
 
     @media (max-width: 768px) {
       :root {
-        --header-height: 70px;
+        --header-height: 118px;
       }
 
       .menu-toggle {
         display: flex;
-      }
-
-      .header-desktop-cta {
-        display: none;
       }
 
       .nav-menu {
@@ -2811,6 +2807,128 @@
       color: var(--color-white);
     }
 
+    @media (max-width: 1180px) and (min-width: 993px) {
+      .logo {
+        font-size: 1.55rem;
+        margin-right: 12px;
+      }
+
+      .nav-menu {
+        gap: 12px;
+      }
+
+      .nav-link {
+        font-size: 0.82rem;
+      }
+
+      .header-actions {
+        gap: 8px;
+      }
+
+      .btn-admin-trigger,
+      .cart-header-btn {
+        padding: 8px 12px;
+        font-size: 0.78rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      :root {
+        --header-height: 118px;
+      }
+
+      .header,
+      .header.scrolled {
+        height: auto;
+        min-height: var(--header-height);
+        padding: 10px 0 12px;
+      }
+
+      .header-container {
+        flex-wrap: wrap;
+        row-gap: 10px;
+      }
+
+      .logo {
+        order: 1;
+        margin-right: 0;
+        font-size: 1.65rem;
+      }
+
+      .menu-toggle {
+        display: flex;
+        order: 2;
+        margin-left: auto;
+      }
+
+      .header-container > nav {
+        order: 4;
+        width: 0;
+        height: 0;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 82%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 85px 28px 40px;
+        box-shadow: -6px 0 24px rgba(0, 0, 0, 0.18);
+        transition: right var(--transition-normal);
+        z-index: 1005;
+        gap: 16px;
+      }
+
+      .nav-menu.open {
+        right: 0;
+      }
+
+      .nav-link {
+        font-size: 1.15rem;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--color-gray-border);
+      }
+
+      .nav-menu .mobile-only-cta {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      /* Botões de Admin e Carrinho posicionados abaixo da logo Casa do Churras no mobile */
+      .header-desktop-cta.header-actions {
+        display: flex !important;
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(105, 21, 109, 0.14);
+      }
+
+      .header-desktop-cta.header-actions .btn-admin-trigger,
+      .header-desktop-cta.header-actions .cart-header-btn {
+        flex: 1 1 0;
+        justify-content: center;
+        padding: 9px 10px;
+        font-size: 0.78rem;
+        border-radius: 8px;
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding-top: calc(var(--header-height) + 28px);
+      }
+    }
+
     @media (max-width: 900px) {
       .admin-modal-body {
         grid-template-columns: 1fr;
@@ -2818,6 +2936,34 @@
 
       .admin-form-box {
         position: static;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .logo-badge {
+        width: 34px;
+        height: 34px;
+        font-size: 1.05rem;
+      }
+
+      .header-desktop-cta.header-actions {
+        gap: 8px;
+      }
+
+      .header-desktop-cta.header-actions .btn-admin-trigger,
+      .header-desktop-cta.header-actions .cart-header-btn {
+        padding: 8px 8px;
+        font-size: 0.73rem;
+        gap: 6px;
       }
     }
   </style>
